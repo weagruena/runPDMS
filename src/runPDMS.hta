@@ -1,0 +1,41 @@
+<!-- runPDMS (GUI) -->
+<html>
+<head>
+<title>runPDMS (Lite)</title>
+<HTA:APPLICATION 
+     APPLICATIONNAME="runPDMS"
+	ID="runPDMS"
+     SCROLL="no"
+     SINGLEINSTANCE="yes"
+>
+</head>
+<SCRIPT Language="VBScript">
+Sub runPDMS
+	profile = Profiles.value
+	Set objShell = CreateObject("WScript.Shell") 
+	path = objShell.CurrentDirectory
+	cmd = "ruby -S " & path & "\runPDMS.rb " & profile
+	'cmd = path & "\runPDMS.exe " & profile
+	objShell.run cmd
+	window.Close()
+End Sub
+
+Sub Window_onLoad
+	window.resizeTo 400,250
+End Sub 
+</SCRIPT>
+<body background="runPDMS.png">
+<h3>Active user:</h3>
+<b><font color="blue">winuser</font></b>
+<h3>User profiles for PDMS:</h3>
+<select size="1" name="Profiles">
+<!-- PROFILES -->
+</select>
+<input type="button" value="Start PDMS" name="runButton" onClick="runPDMS">
+<br>
+<p>
+<!-- span id = "DataArea"></span-->
+<p align=right>
+<!--LOGO-->
+</body>
+</html>

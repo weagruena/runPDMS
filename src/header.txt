@@ -1,0 +1,16 @@
+
+
+
+DOCUMENTATION (Source)
+=========================
+
+Project: runPDMS
+
+Folder: G:/_PROJ/Ruby/Ruby/_PDMS/runPDMS/src
+
+Status: 31.05.2011
+
+-----------------------------------
+runPDMS.hta		31.05.2011 14:25		<!-- runPDMS (GUI) -->
+runPDMS.ini		31.05.2011 14:45		# runPDMS configuration
+runPDMS.rb		31.05.2011 14:43		# runPDMS
